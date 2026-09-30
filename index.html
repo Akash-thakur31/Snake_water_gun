@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snake Water Gun</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🐍 Snake Water Gun 💧</h1>
+
+        <p class="subtitle">Choose your weapon and defeat the computer!</p>
+
+        <!-- Score -->
+        <div class="score-board">
+
+            <div class="score">
+                <span>You</span>
+                <strong id="player-score">0</strong>
+            </div>
+
+            <div class="score">
+                <span>Draw</span>
+                <strong id="draw-score">0</strong>
+            </div>
+
+            <div class="score">
+                <span>Computer</span>
+                <strong id="computer-score">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Choices -->
+        <div class="choices">
+
+            <button class="choice" data-choice="snake">
+                🐍
+                <span>Snake</span>
+            </button>
+
+            <button class="choice" data-choice="water">
+                💧
+                <span>Water</span>
+            </button>
+
+            <button class="choice" data-choice="gun">
+                🔫
+                <span>Gun</span>
+            </button>
+
+        </div>
+
+
+        <!-- Battle -->
+        <div class="battle">
+
+            <div class="player-choice">
+                <p>You</p>
+                <div id="player-display">❔</div>
+            </div>
+
+            <div class="vs">
+                VS
+            </div>
+
+            <div class="computer-choice">
+                <p>Computer</p>
+                <div id="computer-display">❔</div>
+            </div>
+
+        </div>
+
+
+        <!-- Result -->
+        <div class="result-box">
+
+            <h2 id="result">Choose your weapon!</h2>
+
+            <p id="message">
+                The battle will begin when you choose.
+            </p>
+
+        </div>
+
+
+        <!-- Round -->
+        <p class="round">
+            Round: <span id="round-number">0</span>
+        </p>
+
+
+        <!-- Restart -->
+        <button id="restart-btn">
+            🔄 Restart Game
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
