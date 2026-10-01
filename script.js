@@ -1,6 +1,6 @@
-// ===============================
+
 // GAME VARIABLES
-// ===============================
+
 
 let playerScore = 0;
 let computerScore = 0;
@@ -22,9 +22,8 @@ const emojis = {
 };
 
 
-// ===============================
 // HTML ELEMENTS
-// ===============================
+
 
 const playerScoreElement =
     document.getElementById("player-score");
@@ -54,9 +53,9 @@ const restartButton =
     document.getElementById("restart-btn");
 
 
-// ===============================
+
 // COMPUTER CHOICE
-// ===============================
+
 
 function getComputerChoice() {
 
@@ -67,9 +66,8 @@ function getComputerChoice() {
 }
 
 
-// ===============================
 // WINNER LOGIC
-// ===============================
+
 
 function determineWinner(player, computer) {
 
@@ -104,9 +102,9 @@ function determineWinner(player, computer) {
 }
 
 
-// ===============================
+
 // PLAY GAME
-// ===============================
+
 
 function playGame(playerChoice) {
 
@@ -124,9 +122,8 @@ function playGame(playerChoice) {
     computerDisplay.textContent = emojis[computerChoice];
 
 
-    // =================================
     // BATTLE ANIMATION
-    // =================================
+    
 
     const battle = document.querySelector(".battle");
 
@@ -138,9 +135,9 @@ function playGame(playerChoice) {
     battle.classList.add("battle-animation");
 
 
-    // =================================
+    
     // SELECTED BUTTON
-    // =================================
+    
 
     choiceButtons.forEach(function(button) {
 
@@ -155,10 +152,8 @@ function playGame(playerChoice) {
     selectedButton.classList.add("selected");
 
 
-    // =================================
     // DETERMINE WINNER
-    // =================================
-
+  
     const winner =
         determineWinner(playerChoice, computerChoice);
 
@@ -180,16 +175,16 @@ function playGame(playerChoice) {
     );
 
 
-    // =================================
+    
     // DRAW
-    // =================================
+
 
     if (winner === "draw") {
 
         drawScore++;
 
         resultElement.textContent =
-            "🤝 It's a Draw!";
+            " It's a Draw!";
 
         messageElement.textContent =
             `Both chose ${capitalize(playerChoice)}.`;
@@ -267,9 +262,9 @@ function playGame(playerChoice) {
     updateScore();
 }
 
-// ===============================
+
 // UPDATE SCORE
-// ===============================
+
 
 function updateScore() {
 
@@ -284,9 +279,8 @@ function updateScore() {
 }
 
 
-// ===============================
 // CAPITALIZE TEXT
-// ===============================
+
 
 function capitalize(word) {
 
@@ -295,9 +289,9 @@ function capitalize(word) {
 }
 
 
-// ===============================
+
 // BUTTON EVENTS
-// ===============================
+
 
 const choiceButtons =
     document.querySelectorAll(".choice");
@@ -317,9 +311,9 @@ choiceButtons.forEach(function(button) {
 });
 
 
-// ===============================
+
 // RESTART GAME
-// ===============================
+
 
 restartButton.addEventListener("click", function() {
 
